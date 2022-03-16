@@ -1,0 +1,111 @@
+/**
+ * \author: Arkadiusz Bubak arkadiusz@bubak.pl
+ * \date 2019.02.10
+ * \brief Tablica automatyczne w C++
+ * v0.01
+ */
+
+#include <iostream>
+#include <sstream>
+#include <algorithm>
+#include <iterator>
+using namespace std;
+
+void tablice();
+//----------------------------------------------------
+void CoutWholeArray(int *array, int size){
+   /* Display whole array in once 
+    * see: LCoutArray */
+   //Ponizsze nie zadziaala poniewaz tablica jest przeksztalaca do wskaznika do niej przy przekazywaniu do funkcji
+   //see: decay to pointer
+   //int size1 = sizeof(array)/sizeof(array[0]);
+   //cout <<"Array size1: "<< size1 << " ->";
+   cout <<"Array size:  "<< size << " ->";
+   std::copy(array, array+size, std::ostream_iterator<int>(std::cout," "));
+   std::cout << std::endl;
+}
+//----------------------------------------------------
+
+
+
+void wypisz(char *array, int wie){
+	for(int i=0; i<wie; i++){
+		cout<<"Tab: " <<array[i] << endl;
+	}
+}
+
+
+int main(){
+
+	tablice();
+
+	return 0;
+}
+
+void tablice(){
+	const int i=20, j=10;
+	int A[10] = {0};         ///<tablica 10 int
+	
+	//for(int w=0; w<10; w++){
+	//	cout <<
+
+
+	A[10];             ///<tablica 10 int
+/*	for(int e=0;e<10;e++){
+		cout <<"tab: "<< A[e] << endl;
+	}
+  CoutWholeArray(A,10);*/
+	int A1[]={1,2,3,4,5,6};  ///<tablica 6 int
+//  CoutWholeArray(A1,6);
+
+
+	int A2[6]={0};
+//  CoutWholeArray(A2,6);
+	int A3[6]{0,0,0,0,0,0};
+ // CoutWholeArray(A3,6);
+	int A4[6]{0};
+//  CoutWholeArray(A4,6);
+	//tablica 20 znaków
+	char B[i]={'a', 'b', 'c', 'd', 'e', 'f'};
+//	for(int p=0;p<20;p++){
+//		cout << "z tab: "<<B[p]<<endl;
+//	}
+	int Ar[j]={0,1,2,3,4,5};
+	//for(int p=0;p<20;p++){
+         //       cout << "z tab: "<<Ar[p]<<endl;
+       // }
+//	wypisz(Ar,j);
+//
+	//tablica 3 znakow
+/*	char B1[]={'g', 'h', 'i'};
+	wypisz(B1,3);
+	char B2[4]="abc";
+	wypisz(B2,4);
+	wypisz(B2,3);
+	char B3[]={"abc"};
+	wypisz(B3,4);
+*/
+	float C[i+j];    ///<tablica 30 float
+	int k = 0;
+	A[0] = 1;          ///<inicj. elementu 0 wartoscia 1
+	A[j-5] = 5;
+	A[j-1] = A[5]+3;
+	A[1] = A[0] + A[5];
+	A[A[9]] = 8;
+	*(A+2) = 17;
+	*(A+3) = *(A+2)+1;
+
+	for (k=0; k<10; k++){
+		cout<<"A["<<k<<"]="<<*(A+k) <<"\t"<< A[k] <<endl;}
+
+  /* //--------------------------------------
+   * // Zadanie
+   * //--------------------------------------
+   * cout <<"\nA[0] = "<< A[0] << endl;
+   * (*A)++;
+   * //(*A++);  // error, prosze powiedziec dlaczego?
+   * cout <<  (*A)++ << endl;
+   * cout <<"A[0] = "<< A[0] << endl;
+   * //-------------------------------------- */
+
+}
