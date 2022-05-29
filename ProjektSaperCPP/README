@@ -1,0 +1,32 @@
+Gra Saper z użyciem biblioteki Ncurses
+
+Działanie gry:
+
+1. Menu:
+W menu mamy możliwość poruszania się za pomocą strzałek w góre i w dół (KEY_UP,KEY_DOWN).
+Opcja którą mamy wybraną jest w odwróconych kolorach.
+Możemy za pomocą przycisku Enter wybrać jedną z 5 akcji:
+Nowa gra - roczpoczęcie gry,
+Wyjdz - wyjście z programu/gry,
+9x9 10 min - klasyczny "niski" poziom trudności,
+16x16 40 min - klasyczny "średni" poziom trudności,
+30x16 99 min - klasyczny "wysoki" poziom trudności,
+Poziom trudności obecnie wybrany jest podświetlony na zielono.
+
+2. Gra:
+Pola nieodkryte są oznaczone '~',
+Strzałki (KEY_UP,KEY_DOWN,KEY_LEFT,KEY_RIGHT) - Przemieszczanie się po planszy,
+Obecne pole na którym się znajdujemy jest wyróżnione odwróconymi kolorami.
+Enter - Odkrycie pola:
+- Trafienie na minę kończy grę,
+- Trafienie na bezpieczne pole (czyli z przynajmniej 1 miną wokół) wyświetli ilość min wokół pola,
+- Trafienie na pole bez min wokół, będzie odsłaniać pola aż do natrafienia na "bezpieczne pole",
+- Nie można odsłonić pola z flagą.
+Przycisk 'f' - Oflagowanie pola:
+- Nieodkryte pole zostaje oznakowane literą F,
+- Z Oflagowanego pola zabiera się oznakowanie.
+Przycisk 'q' - Przerywa gre i umożliwa wcześniejsze wyjście do menu.
+
+Miłej gry :)
+Autor: Michał Okoń
+Email: michal.okon@smcebi.edu.pl
