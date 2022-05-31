@@ -696,18 +696,7 @@ void gra(int* plantabelki, int pl_x, int pl_y, int pl_min){
                     if(pushed == wielkosc - pl_min){
                         trwa = 1;
                         
-                        //Pokazanie min - wadliwe!
-                        /*
-                        int roz;
-                        for(int q=0;q<pl_y;q++){
-                            for(int e=0;e<pl_x;e++){
-                                roz = q*pl_x+e;
-                                if(plantabelki[roz] == 1){
-                                    mvwprintw(grawin,q,e,mina);  
-                                }
-                            }
-                        }
-                        */
+
                         
                         wattron(grawin,COLOR_PAIR(12));
                         mvwprintw(grawin,pl_y+1,1,nZwyciestwo);
@@ -725,18 +714,9 @@ void gra(int* plantabelki, int pl_x, int pl_y, int pl_min){
                     mvwprintw(grawin,pl_y+2,1,kont);
                     mvwprintw(grawin,pl_y/3,pl_x+3,facelose);
                     
-                    //Pokazanie min - wadliwe!
-                    /*
-                    int roz;
-                    for(int q=0;q<pl_y;q++){
-                        for(int e=0;e<pl_x;e++){
-                            roz = q*pl_x+e;
-                            if(plantabelki[roz] == 1){
-                                mvwprintw(grawin,q,e,mina);  
-                            }
-                        }
-                    }
-                    */
+                    //Narysowanie trafienia w mine
+                    //Sprawdzic dokladnie
+                    mvwprintw(grawin,y,x,mina);
                     
                     wattroff(grawin,COLOR_PAIR(13));
                     wgetch(grawin);
