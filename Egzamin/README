@@ -1,5 +1,8 @@
 Gra Saper z użyciem biblioteki Ncurses
 
+Instalacja git: sudo apt install git
+git clone https://github.com/michal-okon00/CPP.git
+Instalacja ncurses: sudo apt-get install libncurses5-dev libncursesw5-dev
 Kompilacja: g++ ProjektSaper.cc -o projekt -lncurses
 
 Działanie gry:
