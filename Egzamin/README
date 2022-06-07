@@ -1,5 +1,7 @@
 Gra Saper z użyciem biblioteki Ncurses
 
+Kompilacja: g++ ProjektSaper.cc -o projekt -lncurses
+
 Działanie gry:
 
 1. Menu:
